@@ -10,6 +10,7 @@ PT Home Credit Indonesia is a technology-based financing company that has been i
 
 ### About The Dataset
 <img width="662" alt="Screenshot 2023-11-26 163757" src="https://github.com/Anikmaulia/Scorecard-Model_DS.HCI/assets/129976138/2cdec96a-12a4-42a6-a5e6-c8c03f021506">
+
 This data is provided by Home Credit Indonesia, includes 7 different sources:
 1. **application_{train|test}.csv:**
    - Main table for loan applications, split into Train (with TARGET) and Test (without TARGET).
