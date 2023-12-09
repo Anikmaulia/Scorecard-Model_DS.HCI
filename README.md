@@ -26,9 +26,46 @@ Not all data will be utilized in this project, as specific columns from each tab
    <img width="533" alt="image" src="https://github.com/Anikmaulia/Scorecard-Model_DS.HCI/assets/129976138/24c7e9a4-3547-4dcd-a094-5a95740d25bd">  
    Those facing payment challenges have a significantly lower average income, highlighting the pronounced impact of income on defaults.  
    <img width="527" alt="image" src="https://github.com/Anikmaulia/Scorecard-Model_DS.HCI/assets/129976138/2200291c-d4b8-4f85-a5d3-624c5e00693f">  
-   The data suggests that income may not have a significant impact for females, as both default and non-default customers exhibit similar average incomes.  
-   <b>Recommendation:</b> Consider income as a critical factor, especially for male customers.
+   The data suggests that income may not have a significant impact for females, as both default and non-default customers exhibit similar average incomes.
+   
+   <b>Recommendation:</b> Consider income as a critical factor, especially for male customers.  
    <b>Action:</b> High income may warrant loan approval, while low income may justify rejection to reduce default risk and potential losses.
+2. Default by Average Score from External Data Sources  
+   ![image](https://github.com/Anikmaulia/Scorecard-Model_DS.HCI/assets/129976138/bfae4556-a8ee-4981-ad6c-44da7e19dd4f)
+   Customers facing payment difficulties tend to have a lower average score from external data sources compared to customers without payment difficulties.
 
+   <b>Recommendation:</b> Consider the external score as a critical factor.
+   <b>Action:</b> A high score may justify loan approval, while a low score may warrant rejection to mitigate default risk and potential losses.
 
+## Modeling
+Current recommendations focus on male clients and those with lower external scores. To address wider payment challenges, a machine learning model has been developed for accurate predictions and effective recommendation tailoring. Now, let's review each model's performance.  
+![image](https://github.com/Anikmaulia/Scorecard-Model_DS.HCI/assets/129976138/4cd64647-afca-48dd-91d5-e80c6733c926)  
+The model with the best and consistently good performance is Random Forest. Therefore, predictions for clients with payment difficulties and without payment difficulties on the test data will be conducted using the Random Forest model.
 
+## Feature Importance and Recommendations
+![image](https://github.com/Anikmaulia/Scorecard-Model_DS.HCI/assets/129976138/fea4ee08-9b4c-403c-ae94-50047f9de217)
+1. <b>Client Prioritization:</b> Target clients with robust external scores (> 0.4).
+2. <b>Document Turnover Rule:</b> Enforce a streamlined 9-year document turnover policy.
+3. <b>Annuity Adjustment Strategy:</b> Fine-tune annuity amounts for clients in payment challenges.
+4. <b>Registration Stability:</b> Ensure a maximum 12-year registration stability.
+5. <b>Credit Payment Cap:</b> Implement a 1.8-year cap for previous credit payments.
+
+## Differences Before and After Building the Model
+
+<b>Before:</b>
+- All 307,511 loan applications accepted.
+- No rejections for clients without payment difficulties.
+- 24,825 clients face payment difficulties (8% default rate).
+- Potential loss: 12,748,407,075 IDR (Assuming 513,531 IDR loss per client).
+- Adjusted potential loss (50% treated): 6,373,946,772 IDR.
+
+<b>After:</b> 
+- Only 287,353 predicted non-difficulty clients’ (TN + FP) loans accepted.
+- 172 non-difficulty clients' loans rejected.
+- 4,839 clients face difficulties (1.7% default rate).
+- Potential loss: 2,484,976,509 IDR (Assuming 513,531 IDR loss per client).
+- Adjusted potential loss (50% treated): 1,242,231,489 IDR.
+
+```
+Model significantly reduces default rate and potential losses.
+```
