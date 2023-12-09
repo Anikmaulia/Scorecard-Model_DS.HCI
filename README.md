@@ -40,10 +40,11 @@ Not all data will be utilized in this project, as specific columns from each tab
 ## Modeling
 Current recommendations focus on male clients and those with lower external scores. To address wider payment challenges, a machine learning model has been developed for accurate predictions and effective recommendation tailoring. Now, let's review each model's performance.  
 ![image](https://github.com/Anikmaulia/Scorecard-Model_DS.HCI/assets/129976138/4cd64647-afca-48dd-91d5-e80c6733c926)  
-The model with the best and consistently good performance is Random Forest. Therefore, predictions for clients with payment difficulties and without payment difficulties on the test data will be conducted using the Random Forest model.
+The model with the best and consistently good performance is <b>Random Forest</b>. Therefore, predictions for clients with payment difficulties and without payment difficulties on the test data will be conducted using the Random Forest model.
 
 ## Feature Importance and Recommendations
-![image](https://github.com/Anikmaulia/Scorecard-Model_DS.HCI/assets/129976138/fea4ee08-9b4c-403c-ae94-50047f9de217)
+![image](https://github.com/Anikmaulia/Scorecard-Model_DS.HCI/assets/129976138/fea4ee08-9b4c-403c-ae94-50047f9de217)  
+<b> Recommendations:</b>
 1. <b>Client Prioritization:</b> Target clients with robust external scores (> 0.4).
 2. <b>Document Turnover Rule:</b> Enforce a streamlined 9-year document turnover policy.
 3. <b>Annuity Adjustment Strategy:</b> Fine-tune annuity amounts for clients in payment challenges.
@@ -51,6 +52,7 @@ The model with the best and consistently good performance is Random Forest. Ther
 5. <b>Credit Payment Cap:</b> Implement a 1.8-year cap for previous credit payments.
 
 ## Differences Before and After Building the Model
+![image](https://github.com/Anikmaulia/Scorecard-Model_DS.HCI/assets/129976138/6a1d3f2b-f643-45c5-9324-fdb03a51a856)
 
 <b>Before:</b>
 - All 307,511 loan applications accepted.
@@ -69,3 +71,6 @@ The model with the best and consistently good performance is Random Forest. Ther
 ```
 Model significantly reduces default rate and potential losses.
 ```
+
+## Prediction Results for the Target using a Random Forest Model on the Test Data
+There are 121 (0.25%) clients predicted to experience payment difficulties, while the remaining 48,623 (99.75%) clients do not face payment challenges.
