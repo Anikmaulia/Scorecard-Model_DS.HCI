@@ -7,3 +7,7 @@ PT Home Credit Indonesia is a technology-based financing company that has been i
 2. <b>Goals:</b> Decrease the default rate among customers to minimize the potential risk of financial loss.
 3. <b>Objective:</b> Develop a classification model to generate credit score predictions for binary values (0 indicating clients without payment difficulties and 1 indicating clients with payment difficulties), and selectively approve loans based on predictions of 0.
 4. <b>Business Metrics:</b> Default rate.
+
+### About The Dataset
+![image.png](attachment:image.png)
+
